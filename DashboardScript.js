@@ -96,7 +96,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             else if(WeatherDescription.includes('clouds'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "url('images/Cloudy.jpg')"
+                    "background-image": "url('Cloudy.jpg')"
                 });
 
                 $("#Humidity").css({
@@ -118,7 +118,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             else if(WeatherDescription.includes('rain'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "url('images/Rain.jpg')"
+                    "background-image": "url('Rain.jpg')"
                 });
 
                 $("#Humidity").css({
@@ -140,7 +140,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             else if(WeatherDescription.includes('thunder'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "url('images/Thunderstorm.jpg')"
+                    "background-image": "url('Thunderstorm.jpg')"
                 });
 
                 $("#Humidity").css({
@@ -162,7 +162,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             else if(WeatherDescription.includes('snow'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "url('images/Snow.jpg')"
+                    "background-image": "url('Snow.jpg')"
                 });
 
                 $("#Humidity").css({
@@ -188,7 +188,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             else if(WeatherDescription.includes('mist') || WeatherDescription.includes('fog') || WeatherDescription.includes('haze') ||  WeatherDescription.includes('smoke'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "url('images/MistAndFog.jpg')"
+                    "background-image": "url('MistAndFog.jpg')"
                 });
 
                 $("#Humidity").css({
