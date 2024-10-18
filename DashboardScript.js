@@ -73,7 +73,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
             if(WeatherDescription.includes('clear'))
             {
                 $("#WeatherWidget").css({
-                    "background-image": "URL("images/clear.png")"
+                    "background-image": "url('/images/clear.jpg')"
                 });
 
                 $("#Humidity").css({
