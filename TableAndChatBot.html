@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TableAndChatBotStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="TableAndChatBotScript.js"></script>
+</head>
+<body>
+    <div id="outerDiv">
+        <aside id="sideBar">
+            <div id="LogoName">
+                <img src="images/logo.png" alt="logo" id="logo">
+                <h2>Climate Cues</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Dashboard.html">Dashboard</a></li>
+                    <li><a href="TableAndChatBot.html">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+
+
+        <div id="mainContent">
+            <div id="UpperPart">
+                <div id="searchBar">
+                    <input type="search" id="CityName" placeholder="Enter your City">
+                    <button id="SearchButton">Search</button>
+                </div>
+                <div id="UserProfile">
+                </div>
+            </div>
+
+            <div id="LowerPart">
+                <div>
+                    <div id="TableTitle">
+                        <div id="TableHeading">
+                            <i class='fas fa-cloud-sun' style='font-size:30px; margin-right: 20px; color: #009ad2; margin-left: 25px;'></i>
+                            <p>5-Day Weather Forecast</p>
+                        </div>
+                        <button id="FilterButton"><i class="fa-solid fa-sliders" style="font-size: 24px; margin-right: 25px; color: #009ad2; border: none; background-color: transparent;"></i></button>
+                        <div id="FilterDiv" class="FilterHide">
+                            <button id="AscendingOrder">Ascending Order</button>
+                            <button id="WithoutRain">Days Without Rain</button>
+                            <button id="HighestTemperature">Highest Temperature</button>
+                            <button id="DescendingOrder">Descending Order</button>
+                        </div>
+                    </div>
+
+                    <div id="TableDiv">
+                        <table id="TemperatureTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Temperature°C</th>
+                                    <th colspan="2">Weather Condition</th>
+                                </tr>
+                            </thead>
+                            <tbody id="TemperatureTableBody">
+                               <div id="SpinnerLoader"></div>
+                            </tbody>
+                        </table>
+                    </div>
+                   
+
+                    <div id="PageControls">
+                        <div id="previousPg"><i class="fa-solid fa-arrow-left" style="font-size: 22px;"></i></div>
+                        <div id="PageDiv">
+                            <span id="Page">Page</span>
+                            <span id="PageNumber">1</span>
+                        </div>
+                        <div id="nextPg"><i class="fa-solid fa-arrow-right" style="font-size: 22px;"></i></div>
+                    </div>
+                </div>
+
+                <div id="ChatBotDiv">
+                    <div id="Bot">
+                        <img src="/images/bot.png" style="width: 60px; display: block;">
+                        <p id="Aero">Aero: Your Personal Sky Guide!</p>
+                    </div>
+                   
+                    <div id="ResponsesDiv">
+                    </div>
+                    <div id="InputArea">
+                        <input type="text" id="chatBotInput" required placeholder="Ask Something..." >
+                        <button id="SendCB"><i class="fa-regular fa-paper-plane" style="font-size: 20px;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

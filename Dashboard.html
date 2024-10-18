@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DashboardStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="DashboardScript.js"></script>
+</head>
+<body>
+    <div id="outerDiv">
+        <aside id="sideBar">
+            <div id="LogoName">
+                    <img src="images/logo.png" alt="logo" id="logo">
+                    <h2 id="WeatherApp">Climate Cues</h2>
+            </div>
+                <nav>
+                    <ul>
+                        <li><a href="Dashboard.html">Dashboard</a></li>
+                        <li><a href="TableAndChatBot.html">Tables</a></li>
+                    </ul>
+                </nav>
+        </aside>
+
+
+
+        <div id="mainContent">
+            <div id="UpperPart">
+                <div id="searchBar">
+                    <input type="search" id="CityName" placeholder="Enter your City">
+                    <button id="SearchButton">Search</button>
+                </div>
+                <div id="UserProfile">
+                </div>
+            </div>
+
+            <div id="WeatherWidget">
+
+                <div id="BlurryLayer"></div>
+
+                <div id="WidgetPart1">
+
+                    <div id="UpperPartOfWidget">
+                        <div>
+                            <div id="Location">
+                                <span id="LocationValue">New York</span>
+                            </div>
+                            <div id="WeatherDescription">
+                                <p id="WeatherDescriptionValue">Sunny</p>
+                            </div>
+                        </div>
+
+                       <div id="Toggle">
+                            <button id="Cel">°C</button>
+                            <button id="Far">°F</button>
+                       </div>
+
+                    </div>
+                    
+                    <div id="Temperature">
+                        <img src="" id="weatherIcon" style="width:10%; margin-right: 20px;">
+                        <span id="TemperatureValue">40</span>
+                        <span id="TemperatureUnit"><sup id="SuperScriptTemp">°C</sup></span>
+                    </div>    
+                </div>
+
+                <div id="WidgetPart2">
+                    <div id="Humidity">
+                        <div id="HumidityInnerDiv">
+                            <i class="fa-solid fa-droplet" style="margin-right: 10px; color: #00aaff; font-size:20px;"></i>
+                            <span class="Labels">Humidity</span>
+                        </div>
+                        <div id="WindSpeedInnerDiv">
+                            <span id="HumidityValue">30</span>
+                            <span id="HumidityUnit">%</span>
+                        </div>
+                    </div>
+                   
+                    <div id="WindSpeed">
+                        <div>
+                            <i class="fa-solid fa-wind" style="margin-right: 10px; color: #00aaff; font-size:20px;"></i>
+                            <span class="Labels">Wind Speed</span>
+                        </div>
+                        <div>
+                            <span id="WindSpeedValue">17</span>
+                            <span id="WindSpeedUnit">km/h</span>
+                        </div>
+                    </div>
+              </div>  
+            </div>
+
+            <div id="SpinnerLoader"></div>
+
+            <div id="Charts">
+                <canvas id="VerticalBarChart">Vertical Bar Chart</canvas>
+                <canvas id="DoughnutChart">Doughnut Chart</canvas>
+                <canvas id="LineChart">Line Chart</canvas>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
