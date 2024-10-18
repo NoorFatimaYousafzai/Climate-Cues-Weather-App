@@ -1,5 +1,5 @@
 # Climate Cues
-Climate Cues is a weather forecast web application which features a weather widget that displays the current weather information with a dynamic background. It consists of three data visualization charts a vertical bar chart, doughnut chart and a line graph. A five day weather forecast table with pagination that presents the temperature forcast. A chatbot that responds to the users weather and non-weather related queries.
+Climate Cues is a weather forecast web application that features a weather widget that displays current weather information with a dynamic background. It consists of three data visualization charts: a vertical bar chart, a doughnut chart, and a line graph. A five-day weather forecast table with pagination presents the temperature forecast. A chatbot responds to the users' weather and non-weather-related queries.
 
 
 # Technologies Used
@@ -15,9 +15,11 @@ Climate Cues is a weather forecast web application which features a weather widg
 ## 1. OpenWeather API
 - Go to [OpenWeatherAPI](https://home.openweathermap.org/users/sign_up) and sign up.
 - After signing up, obtain your weather api key.
+- Insert the API key in the appropriate sections of the code.
 ## 2. Gemini API
 - Go to  [Gemini API](https://ai.google.dev/aistudio) and sign up.
--  After signing up, obtain your gemini api key.
+- After signing up, obtain your gemini api key.
+- Insert the API key in the appropriate sections of the code.
 ## 3. Chart.js
 - For data visualization use [Chart.js](https://www.chartjs.org/)
 ## 4. NodeJs
@@ -25,7 +27,14 @@ Climate Cues is a weather forecast web application which features a weather widg
 
 
 # Installation
-Clone the Repository using the following command:
+1. Clone the Repository using the following command:
+```
+https://github.com/NoorFatimaYousafzai/Climate-Cues-Weather-App.git
+```
+2. Navigate to the project directory using:
+```
+cd Climate-Cues-Weather-App
+```
 
 
 # Exceution
