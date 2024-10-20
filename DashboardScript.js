@@ -33,7 +33,14 @@ $(document).ready(function(){
         const APIKey = '4fff08fac8f8ec2043af413b2b4c4770';
         const UnitOfTemperature = 'metric';
 
-        DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature);
+        if(!CityName || CityName === "")
+        {
+            alert("City Name field is empty!");
+        }
+        else
+        {
+            DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature);
+        }
        
     });
 
@@ -215,6 +222,7 @@ function DisplayWeatherWidget(CityName, APIKey, UnitOfTemperature)
         }
 
     }).fail(function(){
+
         alert("Error in fetching data");
     })
    
