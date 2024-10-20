@@ -578,7 +578,25 @@ li:hover {
 
 }
 
-@media only screen and (max-width: 1500px) and (min-width:1200px){
+@media only screen and (max-width: 1200px) and (min-width:1001px){
+
+    #Charts{
+        justify-items: center; 
+    }
+
+    #VerticalBarChart, #DoughnutChart, #LineChart{
+        max-width: 280px;
+        max-height: 230px;
+    }
+
+    #outerDiv
+    {   
+        grid-template-columns: 1fr 5fr;
+    }
+
+}
+
+@media only screen and (max-width: 1500px) and (min-width:1201px){
 
     #Charts{
         justify-items: center; 
