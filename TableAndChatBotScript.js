@@ -21,7 +21,16 @@ $(document).ready(function(){
         const CityName = $("#CityName").val();
         const APIKey = '4fff08fac8f8ec2043af413b2b4c4770';
         const UnitOfTemperature = 'metric';
-        FindingLatitudeAndLongitude(CityName, APIKey, UnitOfTemperature);       
+
+        if(!CityName || CityName === "")
+        {
+            alert("City Name field is empty!");
+        }
+        else
+        {
+            FindingLatitudeAndLongitude(CityName, APIKey, UnitOfTemperature);    
+        }
+   
     });
 });
 
@@ -189,9 +198,15 @@ $(document).ready(function (){
 
         const MessageSendUser = $("#chatBotInput").val();
 
-        if(MessageSendUser == "")
+        if(MessageSendUser === "")
         {
-            alert("Input Field is Empty!");
+            const WeatherInformation = `Input Field is Empty!`;
+
+            const Response_Box = $("<div></div>");
+            Response_Box.text(WeatherInformation);
+            Response_Box.addClass("Response");
+            $("#ResponsesDiv").append(Response_Box);
+            $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
         }
         else
         {
@@ -293,7 +308,13 @@ function HighestTemperatureChatBot(CityName)
 
         if(data.length == 0)
         {
-            alert("No Such City Found!");
+            const WeatherInformation = `No Such City Found!`;
+
+            const Response_Box = $("<div></div>");
+            Response_Box.text(WeatherInformation);
+            Response_Box.addClass("Response");
+            $("#ResponsesDiv").append(Response_Box);
+            $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
         }
         else
         {
@@ -345,7 +366,13 @@ function LowestTemperatureChatBot(CityName)
 
         if(data.length == 0)
         {
-            alert("No Such City Found!");
+            const WeatherInformation = `No Such City Found!`;
+
+            const Response_Box = $("<div></div>");
+            Response_Box.text(WeatherInformation);
+            Response_Box.addClass("Response");
+            $("#ResponsesDiv").append(Response_Box);
+            $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
         }
         else
         {
@@ -396,7 +423,13 @@ function AverageTemperatureChatBot(CityName)
 
         if(data.length == 0)
         {
-            alert("No Such City Found!");
+            const WeatherInformation = `No Such City Found!`;
+
+            const Response_Box = $("<div></div>");
+            Response_Box.text(WeatherInformation);
+            Response_Box.addClass("Response");
+            $("#ResponsesDiv").append(Response_Box);
+            $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
         }
         else
         {
@@ -570,7 +603,15 @@ function WeatherRelatedQuestion(CityName)
         }
 
      }).fail(function(){
-        alert("Error in fetching data");
+        
+        const WeatherInformation = `Error in fetching Data!`;
+
+        const Response_Box = $("<div></div>");
+        Response_Box.text(WeatherInformation);
+        Response_Box.addClass("Response");
+        $("#ResponsesDiv").append(Response_Box);
+        $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
+        
      })
 }
 
@@ -618,7 +659,15 @@ function NonWeatherRelatedQueries(messageUser)
     })
     .catch(error => {
         console.error('Error in getting a response:', error);
-        alert("Error in getting a response!");
+        
+        const NonWeatherInformation = `Error in fetching Data!`;
+
+        const Response_Box = $("<div></div>");
+        Response_Box.text(NonWeatherInformation);
+        Response_Box.addClass("Response");
+        $("#ResponsesDiv").append(Response_Box);
+        $("#ResponsesDiv").scrollTop($("#ResponsesDiv")[0].scrollHeight);
+
     })
 
 }
