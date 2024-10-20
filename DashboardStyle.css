@@ -585,8 +585,8 @@ li:hover {
     }
 
     #VerticalBarChart, #DoughnutChart, #LineChart{
-        max-width: 280px;
-        max-height: 230px;
+        max-width: 230px;
+        max-height: 210px;
     }
 
     #outerDiv
