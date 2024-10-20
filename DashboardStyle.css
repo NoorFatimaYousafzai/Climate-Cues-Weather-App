@@ -379,7 +379,7 @@ li:hover {
         height: 50px;
         border-radius: 50%;
         background-color: rgb(236, 241, 241);
-        background-image: url("/images/profile.png");
+        background-image: url("profile.png");
         background-size: contain;
         background-position: center;
         overflow: hidden; 
